@@ -1,0 +1,27 @@
+<!doctype html>
+<title>Hello from Flask</title>
+{% if name %}
+  <h1>Hello {{ name }}!</h1>
+{% else %}
+  <h1>Hello, World!</h1>
+{% endif %}
+{% filter markdown %}
+# markdown here
+* a
+* list
+* here
+
+| what | about | a |
+| table | | ? |
+
+
+|  | “Real world” application | Potential medical application |
+|-------------------|---------------------------------------------|---------------------------------------------------------------------|
+| Classification | Spam filtering Credit risk profiling | Detecting test abnormality Risk scoring systems |
+| Similarity | Recommendation engines | Protocols / guideline development Patients like me |
+| Outlier detection | Fraudulent claim identification | Adverse drug reactions Misdiagnosis identification |
+| Clustering | Market segmentation | Clinical subgroup identification Outcome based / precision medicine |
+| Deep Learning | Action based learning Power control systems |  |
+
+
+{% endfilter %}
