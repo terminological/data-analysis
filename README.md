@@ -16,7 +16,17 @@ A collection of data analysis projects
 
 ## Setup
 
+https://askubuntu.com/questions/244641/how-to-set-up-and-use-a-virtual-python-environment-in-ubuntu
 
-    
-    
-    
+  sudo apt-get install python3 python3-pip python3-virtualenv virtualenvwrapper
+  echo "source /usr/share/virtualenvwrapper/virtualenvwrapper.sh" >> ~/.
+  export WORKON_HOME=~/.virtualenvs
+  mkdir $WORKON_HOME
+  echo "export WORKON_HOME=$WORKON_HOME" >> ~/.zshrc
+  echo "export PIP_VIRTUALENV_BASE=$WORKON_HOME" >> ~/.zshrc
+  source ~/.zshrc
+
+  mkvirtualenv -p /usr/bin/python3 test
+
+  pip install -r requirements_dev.txt
+  
